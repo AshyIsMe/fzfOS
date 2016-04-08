@@ -5,11 +5,10 @@ Spotlight for the terminal, but better...
 Works quite well with iTerm2's Hotkey window feature: https://www.iterm2.com/features.html#hotkey-window
 ## AA TODO: 
 - hotkey setup screenshot to launch this
-- Add in the other bin utils: chromesettab etc...
 
 ## Install
 - Clone repo
-- Add to your .bashrc:
+- source it in your .bashrc
 
 ```
 source ~/fzfOS/fzfOS.sh
