@@ -1,0 +1,19 @@
+#!/usr/bin/osascript
+# Search tabs
+
+set titleString to ""
+
+tell application "Google Chrome"
+  set window_list to every window
+  repeat with w in window_list
+    set tab_list to every tab in w
+    set _urllisttext to ""
+    repeat with _tab in tab_list
+      set _title to the title of _tab
+      set _url to the URL of _tab
+      set _urllisttext to _urllisttext & _url & " " & _title & "\n"
+    end repeat
+    return _urllisttext
+
+  end repeat
+end tell

@@ -1,0 +1,27 @@
+#!/usr/bin/osascript
+# Choose the tab with the url in argv[1]
+# $ chromesettab http://google.com
+
+on run argv
+  set _url to item 1 in argv
+
+  tell application "Google Chrome"
+      repeat with w in windows
+          set i to 1
+          set _urllisttext to ""
+          repeat with t in tabs of w
+              set _urllisttext to _urllisttext & _url & " " & (get URL of t) & "\n"
+              if URL of t starts with _url then
+                  set active tab index of w to i
+                  #set index of w to 1
+                  activate
+                  return "testing"
+              end if
+              set i to i + 1
+          end repeat
+          return _urllisttext
+      end repeat
+      open location _url
+  end tell
+
+end run
