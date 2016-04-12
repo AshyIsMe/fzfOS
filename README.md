@@ -6,7 +6,7 @@ Spotlight for the terminal, but better...
 - App launching/switching
 - Chrome tab switching
 - Music searching (limited to spotify, see note below)
-- Filesystem find files/directories
+- Filesystem find files/directories (space will preview without opening)
 
 ##Desired Features:
 - Open window switching? ie. fuzzy find open word docs, virtualbox VMs etc
