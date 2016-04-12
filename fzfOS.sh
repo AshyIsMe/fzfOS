@@ -7,7 +7,8 @@ alias play='cat ~/bin/spotifyplaylists-applescript.txt | fzf | osascript '
 
 alias openapps='ps aux | grep "/Applications.*.app/" | sed -n '"'s/.*\(\/Applications.*.app\)\/.*/\1/p'"' | sort -u | fzf | sed '"'s/ /\\\\ /'"' | xargs open'
 alias choosechrometab='chromeopentabs | fzf | xargs chromesettab'
-alias findfiles='mdfind ~ | fzf --bind "space:execute(qlmanage -p {})" | xargs open'
+#alias findfiles='mdfind ~ | fzf --bind "space:execute(qlmanage -p {})" | xargs open'
+alias findfiles='find ~ -name ".*" -prune -o -print | fzf --bind "space:execute(qlmanage -p {})" | xargs open'
 
 # "cd" script for z.sh and fzf fuzzy finding
 c() {
