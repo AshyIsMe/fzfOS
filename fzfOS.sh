@@ -7,6 +7,7 @@ alias play='cat ~/bin/spotifyplaylists-applescript.txt | fzf | osascript '
 
 alias openapps='ps aux | grep "/Applications.*.app/" | sed -n '"'s/.*\(\/Applications.*.app\)\/.*/\1/p'"' | sort -u | fzf | sed '"'s/ /\\\\ /'"' | xargs open'
 alias choosechrometab='chromeopentabs | fzf | xargs chromesettab'
+alias findfiles='mdfind ~ | fzf | xargs open'
 
 # "cd" script for z.sh and fzf fuzzy finding
 c() {
@@ -26,6 +27,7 @@ s() {
     Select a launcher type:
       a => Apps
       c => choose Chrome tab
+      f => Find Files in ~
       o => Switch between Open Apps
       p => spotify Playlists
 "
@@ -40,6 +42,12 @@ EOF
 
     c)
       choosechrometab
+      clear
+      s
+      ;;
+
+    f)
+      findfiles
       clear
       s
       ;;
