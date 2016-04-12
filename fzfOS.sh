@@ -34,18 +34,26 @@ EOF
   case "$type" in
     a)
       app
+      clear
+      s
       ;;
 
     c)
       choosechrometab
+      clear
+      s
       ;;
 
     o)
       openapps
+      clear
+      s
       ;;
 
     p)
       play
+      clear
+      s
       ;;
 
     *)
